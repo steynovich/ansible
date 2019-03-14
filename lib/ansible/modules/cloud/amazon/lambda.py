@@ -393,6 +393,8 @@ def main():
         # Get current state
         current_config = current_function['Configuration']
         current_version = None
+        if 'Version' in current_config:
+            current_version = current_config['Version']
 
         # Update function configuration
         func_kwargs = {'FunctionName': name}
